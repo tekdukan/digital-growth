@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Growth Systems | Web & Sosyal Medya Hizmetleri</title>
+  <meta name="description" content="İşletmeniz için profesyonel web sitesi, sosyal medya yönetimi, dijital reklam ve grafik tasarım çözümleri. ₺5.000 fiyatla." />
+  
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #7c3aed;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --text: #475569;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--dark);
+    }
+    
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+    }
+    
+    .price-badge {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    
+    .price-badge:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* HERO */
+    .hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -300px;
+      right: -200px;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--dark) 30%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    
+    .hero-highlight {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      padding: 20px 30px;
+      border-radius: var(--radius);
+      color: white;
+      display: inline-block;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+    }
+    
+    .highlight-price {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    
+    .highlight-text {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--border);
+    }
+    
+    .btn-outline:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    /* SECTIONS */
+    section {
+      padding: 100px 0;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      color: var(--text);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1.125rem;
+    }
+    
+    /* SERVICE CARDS */
+    .service-intro {
+      background: white;
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 3rem;
+    }
+    
+    .service-card {
+      background: var(--light);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    
+    .service-card:hover::before {
+      opacity: 1;
+    }
+    
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .service-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    .service-description {
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    
+    /* DETAILED SERVICES */
+    .detailed-services {
+      background: #f1f5f9;
+    }
+    
+    .service-category {
+      background: white;
+      padding: 3rem;
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+    }
+    
+    .category-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+    }
+    
+    .category-title {
+      font-size: 2rem;
+      color: var(--dark);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .feature-item {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .feature-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .feature-badge {
+      background: var(--primary);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .feature-description {
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    
+    .price-tag {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    /* WHY CHOOSE US */
+    .why-us {
+      background: linear-gradient(135deg, var(--dark), #1e293b);
+      color: white;
+    }
+    
+    .why-us .section-title {
+      color: white;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .benefit-card {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+    }
+    
+    .benefit-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.5rem;
+    }
+    
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+    }
+    
+    .cta-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-subtitle {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+    
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow);
+    }
+    
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      background: #128C7E;
+    }
+    
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-about {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-heading {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .contact-info {
+      color: #94a3b8;
+      line-height: 1.7;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.875rem;
+    }
+    
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .category-title {
+        font-size: 1.75rem;
+      }
+      
+      .service-category {
+        padding: 2rem 1.5rem;
+      }
+      
+      .highlight-price {
+        font-size: 2.5rem;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .hero {
+        padding: 140px 0 60px;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
+      
+      .service-card {
+        padding: 1.5rem;
+      }
+      
+      .container {
+        padding: 0 15px;
+      }
+    }
+    
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+  </style>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#" class="logo">
+          <div class="logo-icon">DG</div>
+          <span>Digital Growth</span>
+        </a>
+        
+        <a href="#web-services" class="price-badge">
+          Web: ₺5.000
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title fade-in">
+          İşletmenizi Dijital Dünyada Büyütün
+        </h1>
+        
+        <p class="hero-subtitle fade-in">
+          Web sitesinden sosyal medyaya, reklam yönetiminden grafik tasarıma - ihtiyacınız olan tüm dijital çözümler tek çatı altında.
+        </p>
+        
+        <div class="hero-highlight fade-in">
+          <div class="highlight-price">₺5.000</div>
+          <div class="highlight-text">Profesyonel Web Sitesi Kurulumu</div>
+        </div>
+        
+        <div class="cta-buttons fade-in">
+          <a href="#web-services" class="btn btn-primary">
+            <span>📱</span>
+            Hizmetlerimizi Gör
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>💬</span>
+            Ücretsiz Danışmanlık
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE OVERVIEW -->
+  <section class="service-intro">
+    <div class="container">
+      <h2 class="section-title fade-in">Tam Kapsamlı Dijital Çözümler</h2>
+      <p class="section-subtitle fade-in">İşletmenizin dijital dünyada ihtiyaç duyduğu tüm hizmetler</p>
+      
+      <div class="service-grid">
+        <!-- Web Services -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🌐</div>
+          <h3 class="service-title">Web Sitesi Hizmetleri</h3>
+          <p class="service-description">Profesyonel web tasarımı, geliştirme, SEO optimizasyonu ve tam kapsamlı web çözümleri.</p>
+          <a href="#web-services" style="color: var(--primary); font-weight: 600; text-decoration: none;">
+            Detayları Gör →
+          </a>
+        </div>
+        
+        <!-- Social Media -->
+        <div class="service-card fade-in">
+          <div class="service-icon">📱</div>
+          <h3 class="service-title">Sosyal Medya Yönetimi</h3>
+          <p class="service-description">Instagram growth, içerik stratejisi, topluluk yönetimi ve performans optimizasyonu.</p>
+          <a href="#social-media" style="color: var(--primary); font-weight: 600; text-decoration: none;">
+            Detayları Gör →
+          </a>
+        </div>
+        
+        <!-- Meta Ads -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🎯</div>
+          <h3 class="service-title">Meta Reklam Yönetimi</h3>
+          <p class="service-description">Facebook & Instagram reklamları, hedef kitle analizi, kampanya yönetimi ve ROI optimizasyonu.</p>
+          <a href="#meta-ads" style="color: var(--primary); font-weight: 600; text-decoration: none;">
+            Detayları Gör →
+          </a>
+        </div>
+        
+        <!-- Graphic Design -->
+        <div class="service-card fade-in">
+          <div class="service-icon">🎨</div>
+          <h3 class="service-title">Grafik Tasarım</h3>
+          <p class="service-description">Logo, marka kimliği, sosyal medya grafikleri ve profesyonel dijital tasarımlar.</p>
+          <a href="#graphic-design" style="color: var(--primary); font-weight: 600; text-decoration: none;">
+            Detayları Gör →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED WEB SERVICES -->
+  <section id="web-services" class="detailed-services">
+    <div class="container">
+      <div class="service-category fade-in">
+        <div class="category-header">
+          <div class="category-icon">🌐</div>
+          <h2 class="category-title">Web Sitesi Hizmetleri</h2>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Web Design -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🎨</span>
+              Web Tasarımı
+              <span class="feature-badge">Temel</span>
+            </div>
+            <p class="feature-description">Modern, responsive web tasarımı. Mobil uyumlu, kullanıcı dostu arayüzler.</p>
+          </div>
+          
+          <!-- Web Development -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>⚡</span>
+              Web Geliştirme
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Özel yazılım çözümleri, e-ticaret sistemleri, yönetim panelleri.</p>
+          </div>
+          
+          <!-- SEO -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🔍</span>
+              SEO Optimizasyonu
+              <span class="feature-badge">Premium</span>
+            </div>
+            <p class="feature-description">Arama motoru optimizasyonu, anahtar kelime araştırması, teknik SEO.</p>
+          </div>
+          
+          <!-- Performance -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🚀</span>
+              Performans İyileştirme
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Hızlı yükleme süreleri, Core Web Vitals optimizasyonu, cache sistemleri.</p>
+          </div>
+          
+          <!-- E-commerce -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🛒</span>
+              E-ticaret Kurulumu
+              <span class="feature-badge">Premium</span>
+            </div>
+            <p class="feature-description">WooCommerce veya özel çözümler, ödeme sistemi entegrasyonları.</p>
+          </div>
+          
+          <!-- Hosting -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🌍</span>
+              Hosting & Domain
+              <span class="feature-badge">Destek</span>
+            </div>
+            <p class="feature-description">Profesyonel hosting, SSL sertifikası, email hosting kurulumu.</p>
+          </div>
+        </div>
+        
+        <div class="price-tag">
+          <span>💰</span>
+          Fiyatı: ₺5.000
+        </div>
+      </div>
+
+      <!-- SOCIAL MEDIA SERVICES -->
+      <div id="social-media" class="service-category fade-in">
+        <div class="category-header">
+          <div class="category-icon">📱</div>
+          <h2 class="category-title">Sosyal Medya Büyüme</h2>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Instagram Strategy -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>📈</span>
+              Instagram Growth Strategy
+              <span class="feature-badge">Temel</span>
+            </div>
+            <p class="feature-description">Hedef kitle analizi, içerik stratejisi, büyüme planlaması.</p>
+          </div>
+          
+          <!-- Profile Optimization -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>✨</span>
+              Profile Optimization
+              <span class="feature-badge">Temel</span>
+            </div>
+            <p class="feature-description">Bio optimizasyonu, highlight kapakları, görsel kimlik uyumu.</p>
+          </div>
+          
+          <!-- Content Planning -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>📅</span>
+              Content Planning
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Aylık içerik takvimi, Reels stratejisi, carousel planlaması.</p>
+          </div>
+          
+          <!-- Engagement Strategy -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🤝</span>
+              Engagement Strategy
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Topluluk yönetimi, DM stratejisi, etkileşim artırma teknikleri.</p>
+          </div>
+          
+          <!-- Analytics -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>📊</span>
+              Analytics & Insights
+              <span class="feature-badge">Premium</span>
+            </div>
+            <p class="feature-description">Performans analizi, raporlama, veri odaklı optimizasyon.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- META ADS SERVICES -->
+      <div id="meta-ads" class="service-category fade-in">
+        <div class="category-header">
+          <div class="category-icon">🎯</div>
+          <h2 class="category-title">Meta Ads Yönetimi</h2>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Ad Account Setup -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🔧</span>
+              Ad Account Setup
+              <span class="feature-badge">Temel</span>
+            </div>
+            <p class="feature-description">Reklam hesabı kurulumu, pixel entegrasyonu, conversion tracking.</p>
+          </div>
+          
+          <!-- Audience Research -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🎯</span>
+              Audience Research
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Hedef kitle analizi, lookalike audience, özel segmentler.</p>
+          </div>
+          
+          <!-- Creative Strategy -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>✨</span>
+              Creative Strategy
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Reklam kreatifleri, copywriting, A/B testing stratejisi.</p>
+          </div>
+          
+          <!-- Campaign Management -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>📈</span>
+              Campaign Management
+              <span class="feature-badge">Premium</span>
+            </div>
+            <p class="feature-description">Kampanya yönetimi, bütçe optimizasyonu, scaling stratejileri.</p>
+          </div>
+          
+          <!-- Lead Generation -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>💼</span>
+              Lead Generation
+              <span class="feature-badge">Premium</span>
+            </div>
+            <p class="feature-description">Lead kampanyaları, retargeting, conversion optimizasyonu.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRAPHIC DESIGN SERVICES -->
+      <div id="graphic-design" class="service-category fade-in">
+        <div class="category-header">
+          <div class="category-icon">🎨</div>
+          <h2 class="category-title">Grafik Tasarım & Markalaşma</h2>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Logo Design -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🖋️</span>
+              Logo Design
+              <span class="feature-badge">Temel</span>
+            </div>
+            <p class="feature-description">Profesyonel logo tasarımı, marka kimliği uyumu.</p>
+          </div>
+          
+          <!-- Brand Identity -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>🎨</span>
+              Brand Identity
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Renk paleti, font seçimi, marka kılavuzu oluşturma.</p>
+          </div>
+          
+          <!-- Social Media Creatives -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>📱</span>
+              Social Media Creatives
+              <span class="feature-badge">Pro</span>
+            </div>
+            <p class="feature-description">Instagram postları, story tasarımları, highlight kapakları.</p>
+          </div>
+          
+          <!-- Ad Creatives -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>📢</span>
+              Ad Creatives
+              <span class="feature-badge">Premium</span>
+            </div>
+            <p class="feature-description">Reklam bannerları, video reklamlar, carousel tasarımları.</p>
+          </div>
+          
+          <!-- Marketing Visuals -->
+          <div class="feature-item">
+            <div class="feature-title">
+              <span>✨</span>
+              Marketing Visuals
+              <span class="feature-badge">Premium</span>
+            </div>
+            <p class="feature-description">Broşürler, sunumlar, dijital marketing materyalleri.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+    <div class="container">
+      <h2 class="section-title fade-in">Neden Bizi Seçmelisiniz?</h2>
+      <p class="section-subtitle fade-in">Profesyonel yaklaşımımız ve sonuç odaklı çalışma prensiplerimiz</p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">⚡</div>
+          <h3>Hızlı Sonuç</h3>
+          <p style="color: #cbd5e1; margin-top: 1rem;">İşletmeniz için hızlı ve etkili çözümler üretiyoruz</p>
+        </div>
+        
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">📊</div>
+          <h3>Veri Odaklı</h3>
+          <p style="color: #cbd5e1; margin-top: 1rem;">Kararlarımızı analiz ve veriler doğrultusunda alıyoruz</p>
+        </div>
+        
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">💬</div>
+          <h3>Şeffaf İletişim</h3>
+          <p style="color: #cbd5e1; margin-top: 1rem;">Süreç boyunca açık ve şeffaf iletişim kuruyoruz</p>
+        </div>
+        
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">✅</div>
+          <h3>Sertifikalı Uzman</h3>
+          <p style="color: #cbd5e1; margin-top: 1rem;">Meta Ads, Google Digital Marketing sertifikaları</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="contact" class="cta-section">
+    <div class="container">
+      <h2 class="cta-title fade-in">Projenizi Konuşalım</h2>
+      <p class="cta-subtitle fade-in">İşletmeniz için en uygun çözümü bulmak için ücretsiz danışmanlık alın.</p>
+      
+      <a href="https://wa.me/+905375594314" class="whatsapp-btn fade-in" target="_blank">
+        <span>💬</span>
+        WhatsApp'tan Hızlı Mesaj
+      </a>
+      
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <div class="logo-icon">DG</div>
+            <span style="font-weight: 700; font-size: 1.25rem;">Digital Growth</span>
+          </div>
+          <p class="footer-about">İşletmeniz için profesyonel dijital çözümler. Web sitesi, sosyal medya ve dijital pazarlama hizmetleri.</p>
+          <div style="color: white; font-weight: 600; font-size: 1.125rem;">Web: ₺5.000 fiyatla</div>
+        </div>
+        
+        <div>
+          <h3 class="footer-heading">Hizmetler</h3>
+          <ul class="footer-links">
+            <li><a href="#web-services">Web Sitesi Hizmetleri</a></li>
+            <li><a href="#social-media">Sosyal Medya Büyüme</a></li>
+            <li><a href="#meta-ads">Meta Ads Yönetimi</a></li>
+            <li><a href="#graphic-design">Grafik Tasarım</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="footer-heading">İletişim</h3>
+          <div class="contact-info">
+            <p>📱 +90 537 559 43 14price</p>
+            <p>📍 İstanbul, Türkiye</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        © <span id="current-year"></span> Digital Growth Systems. Tüm hakları saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Add scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Mobile menu toggle (if needed)
+    const priceBadge = document.querySelector('.price-badge');
+    priceBadge.addEventListener('click', function(e) {
+      if(window.innerWidth < 768) {
+        e.preventDefault();
+        document.querySelector('#web-services').scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  </script>
+</body>
+</html>
