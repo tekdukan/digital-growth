@@ -106,9 +106,67 @@
       transform: translateY(-2px);
     }
     
-    /* HERO */
+    /* VIDEO HERO */
+    .video-hero {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      margin-top: 80px;
+      overflow: hidden;
+      background: var(--dark);
+    }
+    
+    .video-hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 1;
+      object-fit: cover;
+    }
+    
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(37, 99, 235, 0.4) 100%);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .video-content {
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      padding: 0 20px;
+      z-index: 3;
+      position: relative;
+    }
+    
+    .video-title {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .video-subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    /* HERO SECTION */
     .hero {
-      padding: 160px 0 100px;
+      padding: 100px 0 80px;
       background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
       position: relative;
       overflow: hidden;
@@ -133,7 +191,7 @@
     }
     
     .hero-title {
-      font-size: 3.5rem;
+      font-size: 3rem;
       line-height: 1.1;
       margin-bottom: 1.5rem;
       background: linear-gradient(135deg, var(--dark) 30%, var(--primary) 100%);
@@ -214,7 +272,7 @@
     
     /* SECTIONS */
     section {
-      padding: 100px 0;
+      padding: 80px 0;
     }
     
     .section-title {
@@ -230,6 +288,136 @@
       max-width: 700px;
       margin: 0 auto 3rem;
       font-size: 1.125rem;
+    }
+    
+    /* PORTFOLIO SECTIONS */
+    .portfolio-section {
+      background: white;
+    }
+    
+    .portfolio-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .portfolio-category-title {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    .portfolio-category-subtitle {
+      color: var(--text);
+      font-size: 1.125rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    
+    .portfolio-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
+      border: 1px solid var(--border);
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .portfolio-img {
+      height: 220px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .portfolio-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .portfolio-item:hover .portfolio-img img {
+      transform: scale(1.05);
+    }
+    
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(37, 117, 252, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+    
+    .view-btn {
+      background-color: white;
+      color: #2575fc;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+    
+    .portfolio-item:hover .view-btn {
+      transform: translateY(0);
+    }
+    
+    .portfolio-info {
+      padding: 22px;
+    }
+    
+    .portfolio-category {
+      display: inline-block;
+      background-color: #f0f7ff;
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    
+    .portfolio-title {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+    
+    .portfolio-desc {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+    .portfolio-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 60px 0;
     }
     
     /* SERVICE CARDS */
@@ -351,7 +539,10 @@
       background: var(--light);
       padding: 1.5rem;
       border-radius: 8px;
-      border-left: 4px solid var(--primary);
+    }
+
+    .feature-item:hover {
+      background: #F0F5F7;
     }
     
     .feature-title {
@@ -540,6 +731,15 @@
     
     /* MOBILE RESPONSIVE */
     @media (max-width: 768px) {
+      .video-hero {
+        height: 50vh;
+        min-height: 400px;
+      }
+      
+      .video-title {
+        font-size: 2.2rem;
+      }
+      
       .hero-title {
         font-size: 2.5rem;
       }
@@ -570,15 +770,28 @@
       }
       
       .hero {
-        padding: 140px 0 60px;
+        padding: 80px 0 60px;
       }
       
       section {
         padding: 60px 0;
       }
+      
+      .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
     }
     
     @media (max-width: 480px) {
+      .video-title {
+        font-size: 1.8rem;
+      }
+      
       .hero-title {
         font-size: 2rem;
       }
@@ -593,6 +806,10 @@
       
       .container {
         padding: 0 15px;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
       }
     }
     
@@ -639,6 +856,22 @@
     </div>
   </header>
 
+  <!-- VIDEO HERO -->
+  <section class="video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="https://assets.mixkit.co/videos/46634/46634-720.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay">
+      <div class="video-content">
+        <h1 class="video-title fade-in">Dijital Dünyada Büyümenin Anahtarı</h1>
+        <p class="video-subtitle fade-in">Profesyonel web çözümleri ve sosyal medya stratejileri ile işletmenizi bir sonraki seviyeye taşıyoruz</p>
+        <div class="cta-buttons fade-in">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
@@ -670,6 +903,138 @@
     </div>
   </section>
 
+  <!-- PORTFOLIO: WEB SITES -->
+  <section id="portfolio-websites" class="portfolio-section">
+    <div class="container">
+      <div class="portfolio-header">
+        <h2 class="portfolio-category-title fade-in">Web Site Projelerim</h2>
+        <p class="portfolio-category-subtitle fade-in">İşletmeler için tasarladığımız modern, responsive ve yüksek performanslı web siteleri</p>
+      </div>
+      
+      <div class="portfolio-grid">
+        <!-- Web Project 1 -->
+        <div class="portfolio-item fade-in">
+          <div class="portfolio-img">
+            <img src="https://github.com/tekdukan/digital-growth/blob/main/images/Psikolog.png" alt="E-ticaret Web Sitesi">
+            <div class="portfolio-overlay">
+              <a href="#" class="view-btn">
+                <span>👁️</span>
+                Projeyi İncele
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">E-ticaret</span>
+            <h3 class="portfolio-title">Uluslararası Eğitim Danışmanlığı</h3>
+            <p class="portfolio-desc">Tam responsive, WooCommerce entegreli modern moda mağazası. Mobil uyumlu ve yüksek performanslı.</p>
+          </div>
+        </div>
+        
+        <!-- Web Project 2 -->
+        <div class="portfolio-item fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Kurumsal Web Sitesi">
+            <div class="portfolio-overlay">
+              <a href="#" class="view-btn">
+                <span>👁️</span>
+                Projeyi İncele
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Kurumsal</span>
+            <h3 class="portfolio-title">İnşaat Firması Web Sitesi</h3>
+            <p class="portfolio-desc">Proje galerisi, referanslar ve iletişim modülleri ile profesyonel kurumsal kimlik.</p>
+          </div>
+        </div>
+        
+        <!-- Web Project 3 -->
+        <div class="portfolio-item fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Restoran Web Sitesi">
+            <div class="portfolio-overlay">
+              <a href="#" class="view-btn">
+                <span>👁️</span>
+                Projeyi İncele
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Restoran</span>
+            <h3 class="portfolio-title">Lüks Restoran Web Sitesi</h3>
+            <p class="portfolio-desc">Online rezervasyon, menü yönetimi ve galeri ile premium restoran web çözümü.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO: SOCIAL MEDIA -->
+  <section id="portfolio-social" class="portfolio-section">
+    <div class="container">
+      <div class="portfolio-header">
+        <h2 class="portfolio-category-title fade-in">Sosyal Medya Çalışmaları</h2>
+        <p class="portfolio-category-subtitle fade-in">Markalar için yürüttüğümüz sosyal medya stratejileri, içerik üretimi ve büyüme çalışmaları</p>
+      </div>
+      
+      <div class="portfolio-grid">
+        <!-- Social Project 1 -->
+        <div class="portfolio-item fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Instagram Growth">
+            <div class="portfolio-overlay">
+              <a href="#" class="view-btn">
+                <span>👁️</span>
+                Çalışmayı İncele
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Instagram Growth</span>
+            <h3 class="portfolio-title">Güzellik Markası Instagram</h3>
+            <p class="portfolio-desc">3 ayda 15K takipçi büyümesi, reels stratejisi ve engagement artışı sağlandı.</p>
+          </div>
+        </div>
+        
+        <!-- Social Project 2 -->
+        <div class="portfolio-item fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1611944212129-29977ae1398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Content Strategy">
+            <div class="portfolio-overlay">
+              <a href="#" class="view-btn">
+                <span>👁️</span>
+                Çalışmayı İncele
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Content Strategy</span>
+            <h3 class="portfolio-title">Fitness Influencer Yönetimi</h3>
+            <p class="portfolio-desc">Aylık içerik takvimi, reels planlaması ve topluluk yönetimi ile growth sağlandı.</p>
+          </div>
+        </div>
+        
+        <!-- Social Project 3 -->
+        <div class="portfolio-item fade-in">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Social Media Ads">
+            <div class="portfolio-overlay">
+              <a href="#" class="view-btn">
+                <span>👁️</span>
+                Çalışmayı İncele
+              </a>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Social Media Ads</span>
+            <h3 class="portfolio-title">Restaurant Facebook Kampanyası</h3>
+            <p class="portfolio-desc">Hedef kitle optimizasyonu ile %40 düşük maliyetli lead generation sağlandı.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICE OVERVIEW -->
   <section class="service-intro">
     <div class="container">
@@ -683,7 +1048,6 @@
           <h3 class="service-title">Web Sitesi Hizmetleri</h3>
           <p class="service-description">Profesyonel web tasarımı, geliştirme, SEO optimizasyonu ve tam kapsamlı web çözümleri.</p>
           <a href="#web-services" style="color: var(--primary); font-weight: 600; text-decoration: none;">
-            Detayları Gör →
           </a>
         </div>
         
@@ -693,7 +1057,6 @@
           <h3 class="service-title">Sosyal Medya Yönetimi</h3>
           <p class="service-description">Instagram growth, içerik stratejisi, topluluk yönetimi ve performans optimizasyonu.</p>
           <a href="#social-media" style="color: var(--primary); font-weight: 600; text-decoration: none;">
-            Detayları Gör →
           </a>
         </div>
         
@@ -703,7 +1066,6 @@
           <h3 class="service-title">Meta Reklam Yönetimi</h3>
           <p class="service-description">Facebook & Instagram reklamları, hedef kitle analizi, kampanya yönetimi ve ROI optimizasyonu.</p>
           <a href="#meta-ads" style="color: var(--primary); font-weight: 600; text-decoration: none;">
-            Detayları Gör →
           </a>
         </div>
         
@@ -713,7 +1075,6 @@
           <h3 class="service-title">Grafik Tasarım</h3>
           <p class="service-description">Logo, marka kimliği, sosyal medya grafikleri ve profesyonel dijital tasarımlar.</p>
           <a href="#graphic-design" style="color: var(--primary); font-weight: 600; text-decoration: none;">
-            Detayları Gör →
           </a>
         </div>
       </div>
@@ -1051,9 +1412,17 @@
         </div>
         
         <div>
+          <h3 class="footer-heading">Portfolyo</h3>
+          <ul class="footer-links">
+            <li><a href="#portfolio-websites">Web Site Projeleri</a></li>
+            <li><a href="#portfolio-social">Sosyal Medya Çalışmaları</a></li>
+          </ul>
+        </div>
+        
+        <div>
           <h3 class="footer-heading">İletişim</h3>
           <div class="contact-info">
-            <p>📱 +90 537 559 43 14price</p>
+            <p>📱 +90 537 559 43 14</p>
             <p>📍 İstanbul, Türkiye</p>
           </div>
         </div>
